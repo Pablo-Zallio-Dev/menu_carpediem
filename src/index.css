@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+      --color-cream: #FAF8F5;
+      --color-font: #1A1A1A;
+      --color-brand: #CF1E3A;
+      --color-brand-dark: #a81630;
+      --color-brand-light: #f590a0;
+      --color-border: #E8E3DC;
+      --color-bgCard: #fffefc;
+      --color-sectionDivider: #737373;
+
+  --font-body: 'Outfit', sans-serif;
+  --font-DMsans: 'DM sans', sans-serif
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-font);
+}
+
+
+/* 
+
+  --color-ink-muted: #6B6B6B;
+  
+  */
