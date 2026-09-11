@@ -13,7 +13,7 @@ const MenuList = ({ itemMenu }: { itemMenu: Plato }) => {
       return (
             <div className="rounded-2xl overflow-hidden w-full max-w-md border border-border/80 ">
                   <div className=" relative ">
-                        <img src={` ${itemMenu.imagen === 'ok' ?`/public/images/image_menu/${itemMenu.id}.webp` :'/public/images/logo.webp'} `} alt="" className={`  w-full h-40 ${ itemMenu.categoria === 'bebidas' ?'object-contain bg-white' :'object-cover' } `} />
+                        <img src={` ${itemMenu.imagen === 'ok' ?`/images/image_menu/${itemMenu.id}.webp` :'/images/logo.webp'} `} alt="" className={`  w-full h-40 ${ itemMenu.categoria === 'bebidas' ?'object-contain bg-white' :'object-cover' } `} />
                         {
                               itemMenu.badge &&
                               <div className=" absolute top-3 left-3 py-1 px-1.5 rounded-full bg-brand tracking-wider ">

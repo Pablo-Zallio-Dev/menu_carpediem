@@ -78,7 +78,7 @@ const CardGroup: React.FC = () => {
                                           <p className=" text-[10px] text-sectionDivider font-DMsans "> min {menu.minimo_personas} personas. </p>
                                     </div>
                                     <hr className=' border border-border my-3 ' />
-                                    <div className=" flex flex-col gap-1.5">
+                                    <div className=" flex flex-col gap-1.5 text-xs">
                                           {
                                                 menu.incluye.map((include) => (
                                                       <GroupMenuTable info={include} />

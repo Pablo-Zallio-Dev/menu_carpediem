@@ -18,7 +18,7 @@ const PROMOTION: Promotion[] = [
             "subtitulo": "Cervezas 2×1 · Lu–Vi de 18:00 a 20:00 h",
             "badge_texto": "2×1",
             "badge_icono": "🍺",
-            "ilustracion_url": "/public/images/image-promo.webp",
+            "ilustracion_url": "/images/image-promo.webp",
             "categoria": "PROMOCIONES",
             "activa": true
       }
