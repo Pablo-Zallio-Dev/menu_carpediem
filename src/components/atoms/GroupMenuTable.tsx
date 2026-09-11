@@ -5,7 +5,7 @@ const GroupMenuTable = ( {info}: {info:string} ) => {
       return (
             <div className="  flex gap-2 items-center ">
                   <Check size={8} color='#CF1E3A ' />
-                  <p className=" text-sectionDivider text-[11px] font-DMsans "> {info} </p>
+                  <p className=" text-sectionDivider text-sm font-DMsans "> {info} </p>
             </div>
       )
 }

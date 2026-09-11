@@ -73,19 +73,19 @@ const CardGroup: React.FC = () => {
                                                       {menu.icono}
                                                       <GroupMenuTitle title={menu.titulo} />
                                                 </div>
-                                                <span className=" font-black text-sm text-brand ">{menu.precio.toFixed(2)}{menu.moneda} / {menu.unidad_precio}</span>
+                                                <span className=" font-black text-brand ">{menu.precio.toFixed(2)}{menu.moneda} / {menu.unidad_precio}</span>
                                           </div>
-                                          <p className=" text-[10px] text-sectionDivider font-DMsans "> min {menu.minimo_personas} personas. </p>
+                                          <p className=" text-xs text-sectionDivider font-DMsans "> min {menu.minimo_personas} personas. </p>
                                     </div>
                                     <hr className=' border border-border my-3 ' />
-                                    <div className=" flex flex-col gap-1.5 text-xs">
+                                    <div className=" flex flex-col text-2xl ">
                                           {
                                                 menu.incluye.map((include) => (
                                                       <GroupMenuTable info={include} />
                                                 ))
                                           }
                                           <div className=" flex flex-col gap-1 mt-2 ">
-                                                <p className=" text-DM text-sectionDivider text-[10px] font-bold">
+                                                <p className=" text-DM text-sectionDivider text-xs font-bold">
                                                       {menu.condiciones.join(' - ')}
                                                 </p>
                                           </div>

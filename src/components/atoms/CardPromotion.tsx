@@ -36,11 +36,11 @@ const CardPromotion: React.FC = () => {
                               <div key={promo.id} className=' grid grid-cols-4 bg-brand rounded-[14px] overflow-hidden  '>
                                     <div className=" flex flex-col gap-2 col-span-3 p-4  ">
                                           <div className="">
-                                                <h3 className=" uppercase text-cream tracking-wider text-xs font-black "> {promo.titulo} </h3>
-                                                <p className=" text-cream/80 text-[10px] "> {promo.subtitulo} </p>
+                                                <h3 className=" uppercase text-cream tracking-wider font-black "> {promo.titulo} </h3>
+                                                <p className=" text-cream/90 text-sm "> {promo.subtitulo} </p>
                                           </div>
                                           <div className=" flex gap-1 ">
-                                                <p className=" uppercase text-brand-light font-black "> {promo.badge_texto} </p>
+                                                <p className=" uppercase text-xl text-brand-light font-black "> {promo.badge_texto} </p>
                                                 <span className=""> {promo.badge_icono} </span>
                                           </div>
                                     </div>

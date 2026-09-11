@@ -2,7 +2,7 @@
 
 const GroupMenuTitle = ( {title}: {title: string} ) => {
   return (
-    <h3 className=' uppercase font-black text-font text-xs '> {title} </h3>
+    <h3 className=' uppercase font-black text-font  '> {title} </h3>
   )
 }
 
