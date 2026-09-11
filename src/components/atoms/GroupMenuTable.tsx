@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react'
-import React from 'react'
+
 
 const GroupMenuTable = ( {info}: {info:string} ) => {
       return (

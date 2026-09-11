@@ -1,4 +1,4 @@
-import React from 'react'
+
 import GroupMenuTitle from './GroupMenuTitle';
 import GroupMenuTable from './GroupMenuTable';
 

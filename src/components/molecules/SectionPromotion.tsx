@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CardPromotion from '../atoms/CardPromotion'
 import SectionDivider from '../atoms/SectionDivider'
 

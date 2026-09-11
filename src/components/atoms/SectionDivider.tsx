@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const SectionDivider = ( {section}: {section: string} ) => {
   return (
