@@ -1,6 +1,6 @@
 const Loading = () => {
   return (
-    <section className=" flex flex-col items-center gap-6 w-full py-10">
+    <section className=" flex flex-col items-center gap-6 w-full py-40">
       <img src="/public/images/logo.webp" alt="" className=" w-40 " />
       <div className=" flex flex-col items-center w-full gap-2  ">
             <h3 className=" uppercase font-black tracking-[.25rem]">cargando carta</h3>
