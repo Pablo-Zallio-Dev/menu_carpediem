@@ -7,8 +7,8 @@ const NavFilterMenu = ( { textBtn, changeTextBtn }: {textBtn: string, changeText
 
 
   return (
-    <section className=" flex justify-center py-2 border-b border-border ">
-      <div className="flex gap-3 flex-nowrap sm:flex-wrap sm:justify-center overflow-scroll sm:w-3/4 ">
+    <section className=" fixed z-40 bg-cream w-full max-w-xl pt-15 flex justify-center py-2 border-b border-border ">
+      <div className="flex gap-3 flex-nowrap sm:flex-wrap sm:justify-center overflow-x-auto scrollbar-hide sm:w-3/4 ">
 
       {
             TEXT_BUTTON.map((btn) => (

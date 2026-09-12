@@ -9,11 +9,12 @@ const MenuList = ({ itemMenu }: { itemMenu: Plato }) => {
             .map(a => ALERGENOS[a])
             .filter(Boolean) // por si algún alérgeno no está en el diccionario, lo descarta en vez de mostrar "undefined"
 
-      console.log(itemMenu)
       return (
-            <div className="rounded-2xl overflow-hidden w-full max-w-md border border-border/80 ">
+
+
+            <div className={` rounded-2xl overflow-hidden w-full max-w-md border border-border/80 `}>
                   <div className=" relative ">
-                        <img src={` ${itemMenu.imagen === 'ok' ?`/images/image_menu/${itemMenu.id}.webp` :'/images/logo.webp'} `} alt="" className={`  w-full h-40 ${ itemMenu.categoria === 'bebidas' ?'object-contain bg-white' :'object-cover' } `} />
+                        <img src={` ${itemMenu.imagen === 'ok' ?`/images/image_menu/${itemMenu.id}.webp` :'/images/logo.webp'} `} alt="" className={`  w-full h-70 ${ itemMenu.categoria === 'bebidas' ?'object-contain bg-white' :'object-cover' } `} />
                         {
                               itemMenu.badge &&
                               <div className=" absolute top-3 left-3 py-1 px-1.5 rounded-full bg-brand tracking-wider ">
@@ -21,19 +22,19 @@ const MenuList = ({ itemMenu }: { itemMenu: Plato }) => {
                               </div>
                         }
                   </div>
-                  <div className=" pt-4 pb-4.5 px-4.5 bg-bgCard ">
-                        <div className=" flex justify-between   ">
-                              <h2 className=" font-semibold "> {itemMenu.nombre} </h2>
-                              <span className=" text-brand font-bold  "> {itemMenu.precio} </span>
+                  <div className=" pt-6 pb-4.5 px-4.5 bg-bgCard ">
+                        <div className=" grid grid-cols-3   ">
+                              <h2 className={`  col-span-2 font-semibold ${itemMenu.categoria === 'bebidas' ?'text-xl' :' text-2xl '} leading-6  `}> {itemMenu.nombre} </h2>
+                              <span className=" text-brand font-bold justify-self-end  "> {itemMenu.precio} </span>
                         </div>
-                        <p className=" pt-2 pb-3 border-b border-border text-xs text-sectionDivider "> {itemMenu.descripcion} </p>
+                        <p className=" pt-2 pb-3 border-b border-border text-sectionDivider "> {itemMenu.descripcion} </p>
                               {
                                     itemMenu.alergenos &&
-                        <div className=" flex items-center gap-1 pt-2 ">
+                        <div className=" flex items-center gap-3 w-full pt-2 ">
                               <p className=" text-[10px] uppercase text-sectionDivider font-bold ">alérgenos:</p>
-                              <div className=" flex gap-2 ">
+                              <div className=" flex flex-wrap gap-2 ">
                                     {codigosAlergenos.map((alergeno) => (
-                                          <span key={alergeno} className=" text-[8px] text-sectionDivider px-1 bg-bgCard border border-border/80 rounded-sm ">{alergeno}</span>
+                                          <span key={alergeno} className=" text-xs text-sectionDivider px-1 bg-bgCard border border-border/80 rounded-sm ">{alergeno}</span>
                                     ))}
                               </div>
                         </div>

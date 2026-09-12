@@ -19,7 +19,7 @@ const GROUP: GroupMenu[] = [
       {
             "id": "group_menu_01",
             "titulo": "MENÚ GRUPO BÁSICO",
-            "icono": "👥",
+            "icono": "/public/icon/group_basic.svg",
             "precio": 22.00,
             "moneda": "€",
             "unidad_precio": "p.p.",
@@ -39,7 +39,7 @@ const GROUP: GroupMenu[] = [
       {
             "id": "group_menu_02",
             "titulo": "MENÚ GRUPO PREMIUM",
-            "icono": "🥂",
+            "icono": "/public/icon/group_premium.svg",
             "precio": 35.00,
             "moneda": "€",
             "unidad_precio": "p.p.",
@@ -67,23 +67,24 @@ const CardGroup: React.FC = () => {
                   {
                         activeMenuGroup.map((menu) => (
                               <div className=" bg-bgCard border border-border rounded-2xl p-4 ">
-                                    <div className=" flex flex-col gap-1 " >
-                                          <div className=" flex items-center justify-between ">
-                                                <div className=" flex gap-1 items-center ">
-                                                      {menu.icono}
+                                    <div className=" flex flex-col gap-3 " >
+                                          <div className=" ">
+                                                <div className=" flex gap-6 items-center ">
+                                                      <img src={menu.icono} alt="" className=' w-12 ' />
                                                       <GroupMenuTitle title={menu.titulo} />
                                                 </div>
-                                                <span className=" font-black text-brand ">{menu.precio.toFixed(2)}{menu.moneda} / {menu.unidad_precio}</span>
+                                                
                                           </div>
-                                          <p className=" text-xs text-sectionDivider font-DMsans "> min {menu.minimo_personas} personas. </p>
+                                          <p className=" text-sm text-sectionDivider font-DMsans font-semibold "> Min. {menu.minimo_personas} personas. </p>
                                     </div>
                                     <hr className=' border border-border my-3 ' />
-                                    <div className=" flex flex-col text-2xl ">
+                                    <div className=" flex flex-col gap-1 text-2xl ">
                                           {
                                                 menu.incluye.map((include) => (
                                                       <GroupMenuTable info={include} />
                                                 ))
                                           }
+                                          <span className=" font-black text-brand self-end py-3 text-sm ">{menu.precio.toFixed(2)}{menu.moneda} / {menu.unidad_precio}</span>
                                           <div className=" flex flex-col gap-1 mt-2 ">
                                                 <p className=" text-DM text-sectionDivider text-xs font-bold">
                                                       {menu.condiciones.join(' - ')}

@@ -17,7 +17,7 @@ const PROMOTION: Promotion[] = [
             "titulo": "HAPPY HOUR",
             "subtitulo": "Cervezas 2×1 · Lu–Vi de 18:00 a 20:00 h",
             "badge_texto": "2×1",
-            "badge_icono": "🍺",
+            "badge_icono": "/icon/beer.svg",
             "ilustracion_url": "/images/image-promo.webp",
             "categoria": "PROMOCIONES",
             "activa": true
@@ -33,19 +33,19 @@ const CardPromotion: React.FC = () => {
 
                   {
                         activePromotions.map((promo) => (
-                              <div key={promo.id} className=' grid grid-cols-4 bg-brand rounded-[14px] overflow-hidden  '>
-                                    <div className=" flex flex-col gap-2 col-span-3 p-4  ">
+                              <div key={promo.id} className=' grid grid-cols-5 bg-brand rounded-[14px] overflow-hidden  '>
+                                    <div className=" flex flex-col gap-2 col-span-4 p-4  ">
                                           <div className="">
                                                 <h3 className=" uppercase text-cream tracking-wider font-black "> {promo.titulo} </h3>
-                                                <p className=" text-cream/90 text-sm "> {promo.subtitulo} </p>
+                                                <p className=" text-cream text-[13px] tracking-wide "> {promo.subtitulo} </p>
                                           </div>
-                                          <div className=" flex gap-1 ">
+                                          <div className=" flex items-center gap-2 ">
                                                 <p className=" uppercase text-xl text-brand-light font-black "> {promo.badge_texto} </p>
-                                                <span className=""> {promo.badge_icono} </span>
+                                                <img src={promo.badge_icono} className=" w-8 " /> 
                                           </div>
                                     </div>
                                     <div className=" flex justify-center items-center w-full h-full bg-brand-dark ">
-                                          <img src={promo.ilustracion_url} alt="" className=' w-1/2 ' />
+                                          <img src={promo.ilustracion_url} alt="" className=' w-8 ' />
                                     </div>
                               </div>
                         ))
