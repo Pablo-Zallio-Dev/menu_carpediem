@@ -36,7 +36,7 @@ const Menu = () => {
                                     <Error error={error} />
                               )
                         }
-                        <section className={ ` flex flex-col items-center gap-8 pt-48 pb-12 ` }>
+                        <section className={ ` flex flex-col items-center gap-8 mt-44 pt-16 pb-12` }>
                               {!loading && !error && menuData
                                     .filter((itemMenu) => select === 'toda la carta' || itemMenu.categoria === select)
                                     .map((itemMenu) => (
