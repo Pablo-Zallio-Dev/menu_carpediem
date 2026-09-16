@@ -1,7 +1,5 @@
 import Container from '../../../../components/atoms/Container'
-import Header from '../../../../components/organisms/Header'
 import Footer from '../../../../components/organisms/Footer'
-import NavMenu from './NavMenu'
 import NavFilterMenu from './NavFilterMenu'
 import { useEffect, useRef, useState } from 'react'
 import MenuList from './MenuList'
@@ -22,10 +20,11 @@ const Menu = () => {
 
       return (
             <Container>
-                  <Header />
-                  <section ref={filtroRef} className=" px-3 mt-16 ">
-                        <NavMenu />
+                  
+                  <section ref={filtroRef} className=" ">
                         <NavFilterMenu textBtn={select} changeTextBtn={setOnSelect} />
+                       
+
                         {
                               loading && (
                                     <Loading />
@@ -36,7 +35,7 @@ const Menu = () => {
                                     <Error error={error} />
                               )
                         }
-                        <section className={ ` flex flex-col items-center gap-8 mt-44 pb-12` }>
+                        <section className={` flex flex-col items-center gap-8 w-full mt-80 px-4 `}>
                               {!loading && !error && menuData
                                     .filter((itemMenu) => select === 'toda la carta' || itemMenu.categoria === select)
                                     .map((itemMenu) => (

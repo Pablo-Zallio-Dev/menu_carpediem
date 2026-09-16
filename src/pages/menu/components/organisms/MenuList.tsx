@@ -12,7 +12,7 @@ const MenuList = ({ itemMenu }: { itemMenu: Plato }) => {
       return (
 
 
-            <div className={` rounded-2xl overflow-hidden w-full max-w-md border border-border/80 `}>
+            <div className={` rounded-2xl overflow-hidden w-full max-w-md border border-border/80 shadow-lg/20 `}>
                   <div className=" relative ">
                         <img src={` ${itemMenu.imagen === 'ok' ?`/images/image_menu/${itemMenu.id}.webp` :'/images/logo.webp'} `} alt="" className={`  w-full h-70 ${ itemMenu.categoria === 'bebidas' ?'object-contain bg-white' :'object-cover' } `} />
                         {
@@ -26,6 +26,7 @@ const MenuList = ({ itemMenu }: { itemMenu: Plato }) => {
                         <div className=" grid grid-cols-3   ">
                               <h2 className={`  col-span-2 font-semibold ${itemMenu.categoria === 'bebidas' ?'text-xl' :' text-2xl '} leading-6  `}> {itemMenu.nombre} </h2>
                               <span className=" text-brand font-bold justify-self-end  "> {itemMenu.precio} </span>
+                              <h3 className=" text-[10px] font-bold uppercase py-1.5 "> {itemMenu.categoria} </h3>
                         </div>
                         <p className=" pt-2 pb-3 border-b border-border text-sectionDivider "> {itemMenu.descripcion} </p>
                               {

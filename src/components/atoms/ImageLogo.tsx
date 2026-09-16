@@ -1,7 +1,7 @@
 
 const ImageLogo = () => {
       return (
-            <div className=" flex justify-center items-center w-16 h-16 ">
+            <div className=" flex justify-center items-center w-24 h-24 ">
                   <img src="/images/logo.webp" alt="" className="  " />
             </div>
 
